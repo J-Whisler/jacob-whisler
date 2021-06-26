@@ -3,3 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --background-color: #0B0C10;
+  --secondary-background-color: #1F2833;
+  --primary-color: #FFFFFF;
+  --secondary-color: #46A29F;
+  --tertiary-color: #747373;
+
+  --main-text: "Josefin Sans", sans-serif;
+}
