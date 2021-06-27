@@ -27,6 +27,7 @@ const StyledHamburger = styled.div`
 
   z-index: 20;
   display: none;
+  cursor: pointer;
   div {
     /* color: green; */
   }

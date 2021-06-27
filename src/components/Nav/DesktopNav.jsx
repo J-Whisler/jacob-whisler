@@ -1,22 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-
+import SocialLinks from "./SocialLinks";
 const DesktopNav = ({ open }) => {
   return (
-    <NavItems open={open}>
-      <li className="li-top">
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/">About</a>
-      </li>
-      <li>
-        <a href="/">Work</a>
-      </li>
-      <li className="li-bottom">
-        <a href="/">Contact</a>
-      </li>
-    </NavItems>
+    <>
+      <NavItems open={open}>
+        <li className="li-top">
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/">About</a>
+        </li>
+        <li>
+          <a href="/">Work</a>
+        </li>
+        <li className="li-bottom">
+          <a href="/">Contact</a>
+        </li>
+        <SocialLinks />
+      </NavItems>
+    </>
   );
 };
 
@@ -24,7 +27,7 @@ const NavItems = styled.div`
   list-style: none;
   /* border: 2px solid white; */
   position: absolute;
-  top: 17rem;
+  top: 14rem;
   height: 20rem;
   width: 15rem;
   background: var(--secondary-background-color);

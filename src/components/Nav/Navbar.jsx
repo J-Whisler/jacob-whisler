@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Logo from "../../images/Logo.png";
 import Hamburger from "./Hamburger";
+
 const Navbar = () => {
   return (
     <StyledNav>
