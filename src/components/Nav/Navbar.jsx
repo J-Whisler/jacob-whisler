@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 import Logo from "../../images/Logo.png";
-import Hambuger from "./Hambuger";
+import Hamburger from "./Hamburger";
 const Navbar = () => {
   return (
     <StyledNav>
       <div className="logo">
         <img src={Logo} alt="logo" />
       </div>
-      <Hambuger />
+      <Hamburger />
     </StyledNav>
   );
 };
@@ -33,6 +33,17 @@ const StyledNav = styled.div`
       position: relative;
       top: 1rem;
       object-fit: cover;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 10rem;
+    width: 100%;
+    .logo {
+      img {
+        position: relative;
+        left: -17rem;
+      }
     }
   }
 `;
