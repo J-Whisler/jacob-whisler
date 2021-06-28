@@ -21,11 +21,10 @@ const StyledHamburger = styled.div`
   /* border: 10px solid blue; */
   width: 2rem;
   height: 2rem;
-  position: fixed;
+  position: absolute;
   top: 15px;
   right: 20px;
-
-  z-index: 20;
+  z-index: 10001;
   display: none;
   cursor: pointer;
   div {
@@ -35,7 +34,6 @@ const StyledHamburger = styled.div`
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;
-    position: fixed;
     top: 4rem;
     right: 3rem;
   }

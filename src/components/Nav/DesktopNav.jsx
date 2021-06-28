@@ -6,10 +6,10 @@ const DesktopNav = ({ open }) => {
     <>
       <NavItems open={open}>
         <li className="li-top">
-          <a href="/">Home</a>
+          <a href="/">About</a>
         </li>
         <li>
-          <a href="/">About</a>
+          <a href="/">Skills</a>
         </li>
         <li>
           <a href="/">Work</a>
@@ -32,6 +32,7 @@ const NavItems = styled.div`
   width: 15rem;
   background: var(--secondary-background-color);
   transition: all 0.5s linear;
+  z-index: 100;
   li {
     border-top: 1px solid var(--tertiary-color);
     border-bottom: 1px solid var(--tertiary-color);
@@ -64,15 +65,15 @@ const NavItems = styled.div`
     }
   }
   @media (max-width: 768px) {
-    /* overflow: hidden; */
     position: fixed;
-    top: 0;
-    /* right: 15rem; */
+    top: 0rem;
+
     padding-top: 12rem;
-    height: 100vh;
-    /* width: 50vw; */
+    height: 75vh;
+
     transform: ${({ open }) =>
       open ? "translateX(35vw)" : "translateX(100vw)"};
+    z-index: 1000;
   }
 `;
 
