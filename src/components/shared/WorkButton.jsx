@@ -2,28 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const buttonAnim = {
-  hidden: {
-    opacity: 0,
-    // y: "-3vh",
-  },
-  show: {
-    opacity: 1,
-    y: "-3.5vh",
-    transition: {
-      duration: 0.5,
-      //   type: "spring",
-      //   stiffness: 120,
-      delay: 0.5,
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      duration: 0.3,
-    },
-  },
-};
+import { buttonAnim } from "./Animations";
 
 const WorkButton = ({ children }) => {
   return (
@@ -33,7 +12,7 @@ const WorkButton = ({ children }) => {
       animate="show"
       exit="exit"
     >
-      <a href="/">{children}</a>
+      {children}
     </WorkButtonContainer>
   );
 };
@@ -45,8 +24,10 @@ const WorkButtonContainer = styled(motion.div)`
   display: flex;
   justify-content: center;
   padding: 0.5rem;
-
   transition: all 0.3s ease-in-out;
+  position: relative;
+  left: 4rem;
+  top: -0.5rem;
 
   a {
     color: var(--background-color);
