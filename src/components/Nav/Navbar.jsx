@@ -1,21 +1,29 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import Logo from "../../images/Logo.png";
 import Hamburger from "./Hamburger";
 
+import { navAnim } from "../Shared/Animations";
+
 const Navbar = () => {
   return (
     <StyledNav>
-      <div className="logo">
+      <motion.div
+        className="logo"
+        variants={navAnim}
+        initial="initial"
+        animate="animate"
+      >
         <img src={Logo} alt="logo" />
-      </div>
+      </motion.div>
       <Hamburger />
     </StyledNav>
   );
 };
 
-const StyledNav = styled.div`
+const StyledNav = styled(motion.div)`
   /* border: 2px solid black; */
   height: 100vh;
   width: 15rem;

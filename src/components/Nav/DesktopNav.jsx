@@ -1,10 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import SocialLinks from "./SocialLinks";
+
+import { motion } from "framer-motion";
+
+import { navItemsAnim } from "../Shared/Animations";
+
 const DesktopNav = ({ open }) => {
   return (
     <>
-      <NavItems open={open}>
+      <NavItems
+        open={open}
+        variants={navItemsAnim}
+        initial="initial"
+        animate="animate"
+      >
         <li className="li-top">
           <a href="/">About</a>
         </li>
@@ -23,7 +33,7 @@ const DesktopNav = ({ open }) => {
   );
 };
 
-const NavItems = styled.div`
+const NavItems = styled(motion.div)`
   list-style: none;
   /* border: 2px solid white; */
   position: absolute;

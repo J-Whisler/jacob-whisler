@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 import bgWords from "../../images/bg-words.png";
 import bgShapes from "../../images/bg-shapes.png";
+
+import { aboutTextAnim, aboutBgAnim } from "../Shared/Animations";
 
 const About = () => {
   const [offsetY, setOffsetY] = useState(0);
@@ -40,20 +42,39 @@ const About = () => {
 
   return (
     <AboutContainer>
-      <img src={bgWords} alt="words background" className="bg-words" />
-      <img src={bgShapes} alt="shapes background" className="bg-shapes" />
+      <motion.img
+        src={bgWords}
+        alt="words background"
+        className="bg-words"
+        variants={aboutBgAnim}
+        initial="initial"
+        animate="animate"
+      />
+      <motion.img
+        src={bgShapes}
+        alt="shapes background"
+        className="bg-shapes"
+        variants={aboutBgAnim}
+        initial="initial"
+        animate="animate"
+      />
 
-      <div className="about-text">
+      <motion.div
+        className="about-text"
+        variants={aboutTextAnim}
+        initial="initial"
+        animate="animate"
+      >
         <h3 className="h3">Hi! My name is Jacob.</h3>
         <h5 className="h5">I am a Front-End Web Developer</h5>
         <h5 className="h5 h5-bottom"> and Designer.</h5>
         <p className="p">Cleveland, OH</p>
-      </div>
+      </motion.div>
     </AboutContainer>
   );
 };
 
-const AboutContainer = styled.div`
+const AboutContainer = styled(motion.div)`
   /* border: 2px solid blue; */
   width: 84.17%;
   height: 100vh;

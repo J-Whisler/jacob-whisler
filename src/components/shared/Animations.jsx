@@ -9,9 +9,9 @@ export const pAnim = {
     y: 0,
     opacity: 1,
     transition: {
-      type: "spring",
-      stiffness: 120,
-      duration: 1.5,
+      // type: "spring",
+      // stiffness: 120,
+      duration: 2,
       delay: 0.5,
     },
   },
@@ -26,9 +26,9 @@ export const buttonAnim = {
     opacity: 1,
     // y: "-3.5vh",
     transition: {
-      duration: 1.5,
-      type: "spring",
-      stiffness: 150,
+      duration: 1,
+      type: "tween",
+      // stiffness: 150,
       delay: 2.5,
     },
   },
@@ -43,11 +43,75 @@ export const gifAnim = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 10,
-      delay: 3,
+      // duration: 2,
+      delay: 4,
       type: "spring",
-      mass: 2,
+      mass: 3,
       stiffness: 200,
+    },
+  },
+};
+
+export const navAnim = {
+  initial: {
+    opacity: 0,
+    y: "-50vh",
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.5,
+    },
+  },
+};
+
+export const navItemsAnim = {
+  initial: {
+    opacity: 0,
+    // y: "-50vh",
+  },
+  animate: {
+    opacity: 1,
+    // y: 0,
+    transition: {
+      duration: 2,
+      delay: 2,
+    },
+  },
+};
+
+export const aboutTextAnim = {
+  initial: {
+    opacity: 0,
+    y: "-100vh",
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      mass: 2,
+      duration: 2,
+      delay: 4,
+    },
+  },
+};
+export const aboutBgAnim = {
+  initial: {
+    opacity: 0,
+    // y: "-100vh",
+  },
+  animate: {
+    opacity: 1,
+    // y: 0,
+    transition: {
+      // type: "spring",
+      // stiffness: 150,
+      duration: 1,
+      delay: 3,
     },
   },
 };
