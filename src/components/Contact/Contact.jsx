@@ -45,6 +45,11 @@ const Contact = () => {
             <h5>Send</h5>
           </button>
         </form>
+        <h6 className="top">
+          <a href="/">
+            Back to top <i className="fas fa-arrow-up"></i>
+          </a>
+        </h6>
       </div>
     </ContactContainer>
   );
@@ -81,6 +86,8 @@ const ContactContainer = styled.div`
     .contact-form {
       display: flex;
       flex-direction: column;
+      margin-top: 3rem;
+      margin-bottom: 6rem;
       input {
         width: 40rem;
         margin-bottom: 1rem;
@@ -124,6 +131,21 @@ const ContactContainer = styled.div`
         border-radius: 1rem;
         align-self: center;
         padding: 0.5rem 0;
+        /* margin-bottom: 10rem; */
+      }
+    }
+    .top {
+      /* border: 2px solid var(--background-color); */
+      /* border-radius: 50%; */
+      padding: 2rem 0.2rem;
+      position: absolute;
+      top: 29rem;
+      left: -15rem;
+      a {
+        text-decoration: none;
+        color: var(--tertiary-color);
+        font-family: var(--main-text);
+        font-size: 1.2rem;
       }
     }
   }
