@@ -368,7 +368,7 @@ const WorkContainer = styled.div`
     }
   }
   @media (max-width: 768px) {
-    top: 164.37vh;
+    top: 180vh;
     overflow-x: hidden;
 
     .work-content-container {
@@ -389,6 +389,7 @@ const WorkContainer = styled.div`
           grid-template-rows: repeat(4, 1fr);
           height: 50vh;
           justify-content: left;
+          margin-top: 2rem;
           h4 {
             /* border: 2px solid greenyellow; */
             font-size: 2.5rem;

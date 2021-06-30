@@ -44,12 +44,12 @@ const Contact = () => {
           <button type="submit">
             <h5>Send</h5>
           </button>
+          <h6 className="top">
+            <a href="/">
+              Back to top <i className="fas fa-arrow-up"></i>
+            </a>
+          </h6>
         </form>
-        <h6 className="top">
-          <a href="/">
-            Back to top <i className="fas fa-arrow-up"></i>
-          </a>
-        </h6>
       </div>
     </ContactContainer>
   );
@@ -133,23 +133,27 @@ const ContactContainer = styled.div`
         padding: 0.5rem 0;
         /* margin-bottom: 10rem; */
       }
-    }
-    .top {
-      /* border: 2px solid var(--background-color); */
-      /* border-radius: 50%; */
-      padding: 2rem 0.2rem;
-      position: absolute;
-      top: 29rem;
-      left: -15rem;
-      a {
-        text-decoration: none;
-        color: var(--tertiary-color);
-        font-family: var(--main-text);
-        font-size: 1.2rem;
+      .top {
+        /* border: 2px solid var(--background-color); */
+        /* border-radius: 50%; */
+        padding: 2rem 0.2rem;
+        position: absolute;
+        top: 29rem;
+        left: -15rem;
+        a {
+          text-decoration: none;
+          color: var(--tertiary-color);
+          font-family: var(--main-text);
+          font-size: 1.2rem;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
       }
     }
   }
   @media (max-width: 768px) {
+    /* top: ; */
     h3 {
       letter-spacing: 0.5rem;
       transform: translateX(2.5rem);
@@ -159,8 +163,15 @@ const ContactContainer = styled.div`
       margin-top: 10rem;
       .contact-form {
         /* border: 2px solid green; */
+        margin-left: 3rem;
         input {
           width: 30rem;
+        }
+        .top {
+          /* border: 2px solid blue; */
+          left: 4rem;
+          margin-top: 13rem;
+          /* top: -1rem; */
         }
       }
     }

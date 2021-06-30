@@ -22,6 +22,7 @@ const StyledNav = styled.div`
   display: flex;
   justify-content: center;
   background: var(--background-color);
+
   .logo {
     /* border: 2px solid white; */
     height: 12rem;
@@ -38,8 +39,11 @@ const StyledNav = styled.div`
   }
 
   @media (max-width: 768px) {
-    height: 10rem;
+    position: fixed;
+    height: 12.1rem;
     width: 100%;
+    z-index: 10000;
+    border-bottom: 2px solid var(--tertiary-color);
     .logo {
       img {
         position: relative;

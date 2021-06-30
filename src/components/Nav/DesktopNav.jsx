@@ -65,11 +65,13 @@ const NavItems = styled.div`
     }
   }
   @media (max-width: 768px) {
-    position: fixed;
+    position: absolute;
     top: 0rem;
 
     padding-top: 12rem;
     height: 75vh;
+    /* width: 100vw; */
+    justify-content: center;
 
     transform: ${({ open }) =>
       open ? "translateX(35vw)" : "translateX(100vw)"};
