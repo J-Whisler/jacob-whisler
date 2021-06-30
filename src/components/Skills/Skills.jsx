@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Bar } from "react-chartjs-2";
-
+import { motion } from "framer-motion";
+import { componentAnim, componentTitleAnim } from "../Shared/Animations";
+import { useInView } from "react-intersection-observer";
 const data = {
   labels: [
     "HTML",
@@ -26,12 +28,31 @@ const options = {
 };
 
 const Skills = () => {
+  const { ref, inView } = useInView();
   return (
     <SkillsContainer id="skills">
-      <h3>Skills</h3>
-      <div className="chart">
+      <motion.h3
+        ref={ref}
+        variants={componentAnim}
+        initial="initial"
+        animate={inView ? "animate" : ""}
+
+        // ref={ref}
+        // variants={componentTitleAnim}
+        // initial="initial"
+        // animate={inView ? "animate" : ""}
+      >
+        Skills
+      </motion.h3>
+      <motion.div
+        className="chart"
+        ref={ref}
+        variants={componentAnim}
+        initial="initial"
+        animate={inView ? "animate" : ""}
+      >
         <Bar data={data} options={options} />
-      </div>
+      </motion.div>
     </SkillsContainer>
   );
 };

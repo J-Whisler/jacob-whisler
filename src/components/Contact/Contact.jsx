@@ -1,8 +1,36 @@
 import React from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+
+import { componentAnim } from "../Shared/Animations";
 
 const Contact = () => {
+  const { ref, inView } = useInView();
+  // console.log(inView);
+
+  // const animation = useAnimation();
+  // console.log(inView);
+
+  // useEffect(() => {
+  //   if (inView) {
+  //     animation.start({
+  //       x: 0,
+  //       transition: {
+  //         type: "spring",
+  //         duration: 1,
+  //         bounce: 0.3,
+  //       },
+  //     });
+  //   }
+  //   if (!inView) {
+  //     animation.start({
+  //       x: "-100vw",
+  //     });
+  //   }
+  // }, [inView]);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -27,7 +55,13 @@ const Contact = () => {
   return (
     <ContactContainer id="contact">
       <h3>Contact</h3>
-      <div className="form-container">
+      <motion.div
+        className="form-container"
+        ref={ref}
+        variants={componentAnim}
+        initial="initial"
+        animate={inView ? "animate" : ""}
+      >
         <form className="contact-form" onSubmit={sendEmail}>
           <label htmlFor="name"></label>
           <input type="text" placeholder="Name" name="name" />
@@ -50,12 +84,12 @@ const Contact = () => {
             </a>
           </h6>
         </form>
-      </div>
+      </motion.div>
     </ContactContainer>
   );
 };
 
-const ContactContainer = styled.div`
+const ContactContainer = styled(motion.div)`
   display: flex;
   width: 100%;
   height: 100vh;
@@ -68,7 +102,7 @@ const ContactContainer = styled.div`
     font-size: 5rem;
     margin-left: 4rem;
     padding-top: 4rem;
-    letter-spacing: 3rem;
+    letter-spacing: 1.5rem;
     text-shadow: 0px 0px 10px var(--tertiary-color);
   }
   .form-container {
@@ -79,10 +113,11 @@ const ContactContainer = styled.div`
     /* margin-right: 30rem; */
     display: flex;
     position: relative;
-    left: -20rem;
+    left: -15rem;
     justify-content: center;
     align-items: center;
     text-align: center;
+    /* overflow: hidden; */
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -132,14 +167,22 @@ const ContactContainer = styled.div`
         align-self: center;
         padding: 0.5rem 0;
         /* margin-bottom: 10rem; */
+        cursor: pointer;
+        h5 {
+          color: var(--background-color);
+        }
+        &:hover {
+          box-shadow: 0px 0px 10px var(--secondary-color);
+          text-shadow: 0px 0px 3px var(--background-color);
+        }
       }
       .top {
         /* border: 2px solid var(--background-color); */
         /* border-radius: 50%; */
         padding: 2rem 0.2rem;
         position: absolute;
-        top: 29rem;
-        left: -15rem;
+        top: -7rem;
+        left: 52rem;
         a {
           text-decoration: none;
           color: var(--tertiary-color);

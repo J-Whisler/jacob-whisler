@@ -27,7 +27,7 @@ export const buttonAnim = {
     // y: "-3.5vh",
     transition: {
       duration: 1,
-      type: "tween",
+      // type: "tween",
       // stiffness: 150,
       delay: 2.5,
     },
@@ -112,6 +112,41 @@ export const aboutBgAnim = {
       // stiffness: 150,
       duration: 1,
       delay: 3,
+    },
+  },
+};
+
+export const componentAnim = {
+  initial: {
+    opacity: 0,
+    // y: "100vh",
+    // scale: 0,
+  },
+  animate: {
+    opacity: 1,
+    // y: 0,
+    // scale: 1,
+    transition: {
+      duration: 3,
+      // delay: 0.5,
+      // type: "tween",
+      // stiffness: 120,
+      // mass: 2,
+    },
+  },
+};
+
+export const componentTitleAnim = {
+  initial: {
+    opacity: 0,
+    x: "-10vw",
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 2,
+      delay: 0.5,
     },
   },
 };

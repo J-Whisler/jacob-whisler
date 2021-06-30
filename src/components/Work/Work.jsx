@@ -3,17 +3,27 @@ import styled from "styled-components";
 import WorkButton from "../Shared/WorkButton";
 import { motion, AnimatePresence } from "framer-motion";
 
-import { pAnim, gifAnim } from "../Shared/Animations";
+import { pAnim, gifAnim, componentAnim } from "../Shared/Animations";
+import { useInView } from "react-intersection-observer";
 
 const Work = () => {
   const [activeProject, setActiveProject] = useState(0);
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+  });
 
   return (
     <WorkContainer id="work">
       <h3>Work</h3>
-      <div className="work-content-container">
-        <div className="work-content-top">
-          <div className="work-content-top-headers">
+      <motion.div
+        className="work-content-container"
+        // ref={ref}
+        // variants={componentAnim}
+        // initial="initial"
+        // animate={inView ? "animate" : ""}
+      >
+        <motion.div className="work-content-top">
+          <motion.div className="work-content-top-headers">
             <h4
               className={activeProject === 1 ? "active" : ""}
               onClick={() => setActiveProject(1)}
@@ -38,13 +48,19 @@ const Work = () => {
             >
               Netflix <i className="fas fa-tv"></i>
             </h4>
-          </div>
+          </motion.div>
           <div className="work-content-info">
             {activeProject === 0 && (
-              <p className="base-p">
+              <motion.p
+                className="base-p"
+                ref={ref}
+                variants={componentAnim}
+                initial="initial"
+                animate={inView ? "animate" : ""}
+              >
                 Click one of the project headers to see a gif of the project as
                 well as infomation about that project!
-              </p>
+              </motion.p>
             )}
             {activeProject === 1 && (
               <>
@@ -129,7 +145,7 @@ const Work = () => {
               </>
             )}
           </div>
-        </div>
+        </motion.div>
         <div className="work-content-bottom">
           {activeProject === 1 && (
             <AnimatePresence>
@@ -237,7 +253,7 @@ const Work = () => {
             </AnimatePresence>
           )}
         </div>
-      </div>
+      </motion.div>
     </WorkContainer>
   );
 };
