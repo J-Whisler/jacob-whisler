@@ -15,22 +15,22 @@ const About = () => {
 
   const bgWordsEl = document.querySelectorAll(".bg-words");
   bgWordsEl.forEach((item) => {
-    item.style.transform = `translateY(${offsetY * 0.7}px)`;
+    item.style.transform = `translateY(${offsetY * 1.2}px)`;
   });
 
   const bgShapesEl = document.querySelectorAll(".bg-shapes");
   bgShapesEl.forEach((item) => {
-    item.style.transform = `translateY(${offsetY * 0.4}px)`;
+    item.style.transform = `translateY(${offsetY * 0.9}px)`;
   });
 
   const h3El = document.querySelectorAll(".h3");
   h3El.forEach((item) => {
-    item.style.transform = `translateY(${offsetY * -0.3}px)`;
+    item.style.transform = `translateY(${offsetY * -0.5}px)`;
   });
 
   const h5El = document.querySelectorAll(".h5");
   h5El.forEach((item) => {
-    item.style.transform = `translateY(${offsetY * -0.2}px)`;
+    item.style.transform = `translateY(${offsetY * -0.3}px)`;
   });
 
   const pEl = document.querySelectorAll(".p");
