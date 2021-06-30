@@ -3,7 +3,7 @@ import styled from "styled-components";
 import SocialLinks from "./SocialLinks";
 
 import { motion } from "framer-motion";
-
+import { Link } from "react-scroll";
 import { navItemsAnim } from "../Shared/Animations";
 
 const DesktopNav = ({ open }) => {
@@ -16,16 +16,24 @@ const DesktopNav = ({ open }) => {
         animate="animate"
       >
         <li className="li-top">
-          <a href="/">About</a>
+          <Link className="link" to="about" smooth={true} duration={1000}>
+            About
+          </Link>
         </li>
         <li>
-          <a href="/">Skills</a>
+          <Link className="link" to="skills" smooth={true} duration={1000}>
+            Skills
+          </Link>
         </li>
         <li>
-          <a href="/">Work</a>
+          <Link className="link" to="work" smooth={true} duration={1000}>
+            Work
+          </Link>
         </li>
         <li className="li-bottom">
-          <a href="/">Contact</a>
+          <Link className="link" to="contact" smooth={true} duration={1000}>
+            Contact
+          </Link>
         </li>
         <SocialLinks />
       </NavItems>
@@ -51,6 +59,7 @@ const NavItems = styled(motion.div)`
     display: flex;
     justify-content: center;
     align-items: center;
+
     &.li-top {
       border-top: 2px solid var(--tertiary-color);
     }
@@ -72,6 +81,9 @@ const NavItems = styled(motion.div)`
         /* font-size: 1.4rem; */
         /* font-weight: 700; */
       }
+    }
+    .link {
+      cursor: pointer;
     }
   }
   @media (max-width: 768px) {

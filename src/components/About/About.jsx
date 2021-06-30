@@ -41,7 +41,7 @@ const About = () => {
   });
 
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <motion.img
         src={bgWords}
         alt="words background"

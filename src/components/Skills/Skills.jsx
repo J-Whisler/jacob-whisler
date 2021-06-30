@@ -27,7 +27,7 @@ const options = {
 
 const Skills = () => {
   return (
-    <SkillsContainer>
+    <SkillsContainer id="skills">
       <h3>Skills</h3>
       <div className="chart">
         <Bar data={data} options={options} />

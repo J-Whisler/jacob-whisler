@@ -9,7 +9,7 @@ const Work = () => {
   const [activeProject, setActiveProject] = useState(0);
 
   return (
-    <WorkContainer>
+    <WorkContainer id="work">
       <h3>Work</h3>
       <div className="work-content-container">
         <div className="work-content-top">
