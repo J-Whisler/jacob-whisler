@@ -51,13 +51,81 @@ const Contact = () => {
 };
 
 const ContactContainer = styled.div`
-  color: blue;
   display: flex;
   width: 100%;
   height: 100vh;
   position: absolute;
   top: 280vh;
   background: var(--secondary-background-color);
+  h3 {
+    color: var(--tertiary-color);
+    font-family: var(--main-text);
+    font-size: 5rem;
+    margin-left: 4rem;
+    padding-top: 4rem;
+    letter-spacing: 3rem;
+    text-shadow: 0px 0px 10px var(--tertiary-color);
+  }
+  .form-container {
+    /* border: 2px solid blue; */
+    width: 100vw;
+    height: 75vh;
+    margin-top: 25vh;
+    /* margin-right: 30rem; */
+    display: flex;
+    position: relative;
+    left: -20rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      input {
+        width: 40rem;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        font-family: var(--main-text);
+        border-radius: 1rem;
+        padding: 0.5rem 1rem;
+        border: 2px solid var(--background-color);
+        background: rgba(0, 0, 0, 0.4);
+        color: var(--primary-color);
+        &:focus {
+          border: 3px solid var(--secondary-color);
+          outline: none;
+        }
+      }
+      textarea {
+        font-size: 1.5rem;
+        font-family: var(--main-text);
+        border-radius: 1rem;
+        padding: 1rem;
+        border: 2px solid var(--tertiary-color);
+
+        margin-bottom: 1rem;
+        background: rgba(0, 0, 0, 0.6);
+        color: var(--primary-color);
+
+        &:focus {
+          border: 3px solid var(--secondary-color);
+          outline: none;
+        }
+      }
+      button {
+        background: var(--secondary-color);
+        outline: none;
+        border: none;
+        font-size: 1.5rem;
+        letter-spacing: 1rem;
+        display: flex;
+        width: 25rem;
+        justify-content: center;
+        border-radius: 1rem;
+        align-self: center;
+      }
+    }
+  }
 `;
 
 export default Contact;
