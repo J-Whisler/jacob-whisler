@@ -123,6 +123,23 @@ const ContactContainer = styled.div`
         justify-content: center;
         border-radius: 1rem;
         align-self: center;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    h3 {
+      letter-spacing: 0.5rem;
+      transform: translateX(2.5rem);
+      /* padding-left: 2rem; */
+    }
+    .form-container {
+      margin-top: 10rem;
+      .contact-form {
+        /* border: 2px solid green; */
+        input {
+          width: 30rem;
+        }
       }
     }
   }
