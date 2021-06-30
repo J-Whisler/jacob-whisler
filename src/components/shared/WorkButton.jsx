@@ -40,6 +40,9 @@ const WorkButtonContainer = styled(motion.div)`
     box-shadow: 0px 0px 10px var(--secondary-color);
     text-shadow: 0px 0px 5px var(--background-color);
   }
+  @media (max-width: 768px) {
+    left: 1rem;
+  }
 `;
 
 export default WorkButton;

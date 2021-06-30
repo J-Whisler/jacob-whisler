@@ -12,14 +12,7 @@ export const pAnim = {
       type: "spring",
       stiffness: 120,
       duration: 1.5,
-      delay: 1,
-    },
-  },
-  exit: {
-    // y: "-5vh",
-    opacity: 0,
-    transition: {
-      duration: 1,
+      delay: 0.5,
     },
   },
 };
@@ -36,13 +29,7 @@ export const buttonAnim = {
       duration: 1.5,
       type: "spring",
       stiffness: 150,
-      delay: 2,
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: {
-      duration: 0.3,
+      delay: 2.5,
     },
   },
 };
@@ -61,13 +48,6 @@ export const gifAnim = {
       type: "spring",
       mass: 2,
       stiffness: 200,
-    },
-    exit: {
-      opacity: 0,
-      x: "10vw",
-      transition: {
-        duration: 1,
-      },
     },
   },
 };

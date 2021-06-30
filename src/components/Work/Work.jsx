@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { pAnim, gifAnim } from "../Shared/Animations";
 
-const Work2 = () => {
+const Work = () => {
   const [activeProject, setActiveProject] = useState(0);
 
   return (
@@ -42,7 +42,7 @@ const Work2 = () => {
           <div className="work-content-info">
             {activeProject === 0 && (
               <p className="base-p">
-                Click one of the headers above to see a gif of the project as
+                Click one of the project headers to see a gif of the project as
                 well as infomation about that project!
               </p>
             )}
@@ -367,6 +367,63 @@ const WorkContainer = styled.div`
       }
     }
   }
+  @media (max-width: 768px) {
+    top: 164.37vh;
+    overflow-x: hidden;
+
+    .work-content-container {
+      /* border: 2px solid blue; */
+      display: grid;
+      grid-template-rows: repeat(2, 1fr);
+      width: 36rem;
+      height: 100vh;
+      left: 12rem;
+      .work-content-top {
+        /* border: 2px solid green; */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 50vh;
+        .work-content-top-headers {
+          /* border: 2px solid purple; */
+          display: grid;
+          grid-template-rows: repeat(4, 1fr);
+          height: 50vh;
+          justify-content: left;
+          h4 {
+            /* border: 2px solid greenyellow; */
+            font-size: 2.5rem;
+            width: 15.5rem;
+            transition: all 0.5s ease;
+            &.active {
+              transform: translateY(0) translateX(2rem);
+            }
+          }
+        }
+
+        .work-content-info {
+          /* border: 2px solid cyan; */
+          height: 50vh;
+          display: flex;
+          justify-content: center;
+
+          .base-p,
+          p {
+            font-size: 1.6rem;
+          }
+        }
+      }
+
+      .work-content-bottom {
+        /* border: 2px solid red; */
+        height: 50vh;
+        /* align-items: none; */
+        .work-gif {
+          position: relative;
+          top: -3rem;
+        }
+      }
+    }
+  }
 `;
 
-export default Work2;
+export default Work;

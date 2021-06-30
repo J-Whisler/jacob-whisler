@@ -72,7 +72,7 @@ const SkillsContainer = styled.div`
     .chart {
       height: 80%;
       width: 80%;
-      left: 3rem;
+      left: 5rem;
       top: 15%;
     }
   }
