@@ -14,22 +14,22 @@ const Work = () => {
 
   return (
     <WorkContainer id="work">
-      <h3>Work</h3>
-      <motion.div
-        className="work-content-container"
-        // ref={ref}
-        // variants={componentAnim}
-        // initial="initial"
-        // animate={inView ? "animate" : ""}
-      >
+      <motion.h3>Work</motion.h3>
+      <motion.div className="work-content-container">
         <motion.div className="work-content-top">
-          <motion.div className="work-content-top-headers">
-            <h4
+          <motion.div
+            className="work-content-top-headers"
+            // variants={componentAnim}
+            // ref={ref}
+            // initial="initial"
+            // animate={inView ? "animate" : ""}
+          >
+            <motion.h4
               className={activeProject === 1 ? "active" : ""}
               onClick={() => setActiveProject(1)}
             >
               Sunshine <i className="fas fa-sun"></i>
-            </h4>
+            </motion.h4>
             <h4
               className={activeProject === 2 ? "active" : ""}
               onClick={() => setActiveProject(2)}

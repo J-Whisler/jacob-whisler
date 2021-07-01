@@ -40,12 +40,28 @@ const About = () => {
     item.style.transform = `translateY(${offsetY * -0.1}px)`;
   });
 
+  const [x, setX] = useState();
+  const [y, setY] = useState();
+  const [speed, setSpeed] = useState();
+
+  document.addEventListener("mousemove", (e) => {
+    const layerEl = document.querySelectorAll(".bg-img");
+    layerEl.forEach((item) => {
+      const speed = item.getAttribute("data-speed");
+      const x = (window.innerWidth - e.pageX * speed) / 100;
+      const y = (window.innerHeight - e.pageY * speed) / 100;
+      // console.log(x);
+      item.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    });
+  });
+
   return (
     <AboutContainer id="about">
       <motion.img
         src={bgWords}
         alt="words background"
-        className="bg-words"
+        className="bg-words bg-img"
+        data-speed="2"
         variants={aboutBgAnim}
         initial="initial"
         animate="animate"
@@ -53,14 +69,16 @@ const About = () => {
       <motion.img
         src={bgShapes}
         alt="shapes background"
-        className="bg-shapes"
+        className="bg-shapes bg-img"
+        data-speed="-2"
         variants={aboutBgAnim}
         initial="initial"
         animate="animate"
       />
 
       <motion.div
-        className="about-text"
+        className="about-text bg-img"
+        data-speed="3"
         variants={aboutTextAnim}
         initial="initial"
         animate="animate"

@@ -29,7 +29,7 @@ export const buttonAnim = {
       duration: 1,
       // type: "tween",
       // stiffness: 150,
-      delay: 2.5,
+      delay: 3,
     },
   },
 };
@@ -44,7 +44,7 @@ export const gifAnim = {
     y: 0,
     transition: {
       // duration: 2,
-      delay: 4,
+      delay: 3,
       type: "spring",
       mass: 3,
       stiffness: 200,
@@ -136,17 +136,17 @@ export const componentAnim = {
   },
 };
 
-export const componentTitleAnim = {
-  initial: {
-    opacity: 0,
-    x: "-10vw",
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 2,
-      delay: 0.5,
-    },
-  },
-};
+// export const componentTitleAnim = {
+//   initial: {
+//     opacity: 0,
+//     x: "-10vw",
+//   },
+//   animate: {
+//     opacity: 1,
+//     x: 0,
+//     transition: {
+//       duration: 2,
+//       delay: 0.5,
+//     },
+//   },
+// };
