@@ -32,7 +32,9 @@ const SocialLinks = () => {
       </div>
       <div className="resume-button">
         <button>
-          <a href="https://www.youtube.com">Resume</a>
+          <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
+            Resume
+          </a>
         </button>
       </div>
     </SocialContainer>

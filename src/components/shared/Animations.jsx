@@ -2,16 +2,16 @@
 
 export const pAnim = {
   initial: {
-    // y: "-5vh",
+    scale: 0,
     opacity: 0,
   },
   animate: {
-    y: 0,
+    scale: 1,
     opacity: 1,
     transition: {
       // type: "spring",
       // stiffness: 120,
-      duration: 2,
+      duration: 1.5,
       delay: 0.5,
     },
   },
@@ -20,16 +20,16 @@ export const pAnim = {
 export const buttonAnim = {
   hidden: {
     opacity: 0,
-    // y: "-3vh",
+    scale: 0,
   },
   show: {
     opacity: 1,
-    // y: "-3.5vh",
+    scale: 1,
     transition: {
-      duration: 1,
-      // type: "tween",
-      // stiffness: 150,
-      delay: 3,
+      duration: 0.5,
+      // type: "linear",
+
+      delay: 1.5,
     },
   },
 };
@@ -38,13 +38,15 @@ export const gifAnim = {
   initial: {
     opacity: 0,
     y: "10vh",
+    // scale: 0,
   },
   animate: {
     opacity: 1,
     y: 0,
+    // scale: 1,
     transition: {
       // duration: 2,
-      delay: 3,
+      delay: 2,
       type: "spring",
       mass: 3,
       stiffness: 200,
@@ -70,14 +72,14 @@ export const navAnim = {
 export const navItemsAnim = {
   initial: {
     opacity: 0,
-    // y: "-50vh",
+    scale: 0,
   },
   animate: {
     opacity: 1,
-    // y: 0,
+    scale: 1,
     transition: {
-      duration: 2,
-      delay: 2,
+      duration: 1.5,
+      delay: 1.5,
     },
   },
 };
@@ -95,7 +97,7 @@ export const aboutTextAnim = {
       stiffness: 120,
       mass: 2,
       duration: 2,
-      delay: 4,
+      delay: 5,
     },
   },
 };
@@ -111,7 +113,7 @@ export const aboutBgAnim = {
       // type: "spring",
       // stiffness: 150,
       duration: 1,
-      delay: 3,
+      delay: 4,
     },
   },
 };

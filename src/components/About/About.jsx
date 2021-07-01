@@ -40,9 +40,9 @@ const About = () => {
     item.style.transform = `translateY(${offsetY * -0.1}px)`;
   });
 
-  const [x, setX] = useState();
-  const [y, setY] = useState();
-  const [speed, setSpeed] = useState();
+  // const [x, setX] = useState();
+  // const [y, setY] = useState();
+  // const [speed, setSpeed] = useState();
 
   document.addEventListener("mousemove", (e) => {
     const layerEl = document.querySelectorAll(".bg-img");
@@ -69,7 +69,7 @@ const About = () => {
       <motion.img
         src={bgShapes}
         alt="shapes background"
-        className="bg-shapes bg-img"
+        className="bg-shapes"
         data-speed="-2"
         variants={aboutBgAnim}
         initial="initial"
@@ -77,8 +77,7 @@ const About = () => {
       />
 
       <motion.div
-        className="about-text bg-img"
-        data-speed="3"
+        className="about-text"
         variants={aboutTextAnim}
         initial="initial"
         animate="animate"

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import emailjs from "emailjs-com";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
-
+import { Link } from "react-scroll";
 import { componentAnim } from "../Shared/Animations";
 
 const Contact = () => {
@@ -79,9 +79,9 @@ const Contact = () => {
             <h5>Send</h5>
           </button>
           <h6 className="top">
-            <a href="/">
+            <Link to="about" smooth={true} duration={1000} className="link">
               Back to top <i className="fas fa-arrow-up"></i>
-            </a>
+            </Link>
           </h6>
         </form>
       </motion.div>
@@ -168,8 +168,10 @@ const ContactContainer = styled(motion.div)`
         padding: 0.5rem 0;
         /* margin-bottom: 10rem; */
         cursor: pointer;
+        transition: 0.3s ease-in-out;
         h5 {
           color: var(--background-color);
+          transition: 0.3s ease-in-out;
         }
         &:hover {
           box-shadow: 0px 0px 10px var(--secondary-color);
@@ -183,6 +185,9 @@ const ContactContainer = styled(motion.div)`
         position: absolute;
         top: -7rem;
         left: 52rem;
+        .link {
+          cursor: pointer;
+        }
         a {
           text-decoration: none;
           color: var(--tertiary-color);
