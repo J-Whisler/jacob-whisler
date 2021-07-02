@@ -5,7 +5,20 @@ import { motion } from "framer-motion";
 import Logo from "../../images/Logo.png";
 import Hamburger from "./Hamburger";
 
-import { navAnim } from "../Shared/Animations";
+const navAnim = {
+  initial: {
+    opacity: 0,
+    y: "-50vh",
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.5,
+    },
+  },
+};
 
 const Navbar = () => {
   return (
