@@ -39,25 +39,25 @@ const aboutBgAnim = {
   },
 };
 
-const componentAnim = {
-  initial: {
-    opacity: 0,
-    // y: "100vh",
-    // scale: 0,
-  },
-  animate: {
-    opacity: 1,
-    // y: 0,
-    // scale: 1,
-    transition: {
-      duration: 3,
-      // delay: 0.5,
-      // type: "tween",
-      // stiffness: 120,
-      // mass: 2,
-    },
-  },
-};
+// const componentAnim = {
+//   initial: {
+//     opacity: 0,
+//     // y: "100vh",
+//     // scale: 0,
+//   },
+//   animate: {
+//     opacity: 1,
+//     // y: 0,
+//     // scale: 1,
+//     transition: {
+//       duration: 3,
+//       // delay: 0.5,
+//       // type: "tween",
+//       // stiffness: 120,
+//       // mass: 2,
+//     },
+//   },
+// };
 
 const About = () => {
   const [offsetY, setOffsetY] = useState(0);

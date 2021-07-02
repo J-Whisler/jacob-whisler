@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import WorkButton from "../Shared/WorkButton";
+// import WorkButton from "../Shared/WorkButton";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { useInView } from "react-intersection-observer";
@@ -61,6 +61,24 @@ const gifAnim = {
     },
   },
 };
+
+const buttonAnim = {
+  hidden: {
+    opacity: 0,
+    scale: 0,
+  },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      // type: "linear",
+
+      delay: 1.5,
+    },
+  },
+};
+
 const Work = () => {
   const [activeProject, setActiveProject] = useState(0);
   const { ref, inView } = useInView({
@@ -135,9 +153,14 @@ const Work = () => {
                     click the button below to view the website!
                   </motion.p>
                 </AnimatePresence>
-                <WorkButton className="work-button">
+                <motion.div
+                  className="work-button"
+                  variants={buttonAnim}
+                  initial="initial"
+                  animate="animate"
+                >
                   <a href="/">See Sunshine!</a>
-                </WorkButton>
+                </motion.div>
               </>
             )}
 
@@ -156,9 +179,14 @@ const Work = () => {
                     view the website!
                   </motion.p>
                 </AnimatePresence>
-                <WorkButton>
+                <motion.div
+                  className="work-button"
+                  variants={buttonAnim}
+                  initial="initial"
+                  animate="animate"
+                >
                   <a href="/">See Discover!</a>
-                </WorkButton>
+                </motion.div>
               </>
             )}
 
@@ -174,9 +202,14 @@ const Work = () => {
                     <span>Game</span> Info
                   </motion.p>
                 </AnimatePresence>
-                <WorkButton>
+                <motion.div
+                  className="work-button"
+                  variants={buttonAnim}
+                  initial="initial"
+                  animate="animate"
+                >
                   <a href="/">See Game!</a>
-                </WorkButton>
+                </motion.div>
               </>
             )}
 
@@ -194,9 +227,14 @@ const Work = () => {
                     button below to view the website!
                   </motion.p>
                 </AnimatePresence>
-                <WorkButton>
+                <motion.div
+                  className="work-button"
+                  variants={buttonAnim}
+                  initial="initial"
+                  animate="animate"
+                >
                   <a href="/">See Netflix!</a>
-                </WorkButton>
+                </motion.div>
               </>
             )}
           </div>
@@ -409,6 +447,30 @@ const WorkContainer = styled.div`
           a {
             text-decoration: none;
             color: var(--secondary-color);
+          }
+        }
+        .work-button {
+          background: var(--secondary-color);
+          width: 12rem;
+          border-radius: 1rem;
+          display: flex;
+          justify-content: center;
+          padding: 0.5rem;
+          transition: all 0.3s ease-in-out;
+          position: relative;
+          left: 4rem;
+          top: -0.5rem;
+
+          a {
+            color: var(--background-color);
+            font-size: 1.5rem;
+            font-family: var(--main-text);
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+          }
+          &:hover {
+            box-shadow: 0px 0px 10px var(--secondary-color);
+            text-shadow: 0px 0px 5px var(--background-color);
           }
         }
       }
