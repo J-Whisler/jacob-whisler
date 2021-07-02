@@ -59,6 +59,23 @@ const StyledNav = styled(motion.div)`
       }
     }
   }
+  @media (max-width: 415px) {
+    position: fixed;
+    /* height: 10rem;
+    width: 100vw;
+     z-index: 10000; 
+    border-bottom: 2px solid var(--tertiary-color);
+    overflow-x: hidden;  */
+    .logo {
+      img {
+        position: relative;
+        margin-right: -17rem;
+        margin-top: 1rem;
+        display: flex;
+        height: 8rem;
+      }
+    }
+  }
 `;
 
 export default Navbar;

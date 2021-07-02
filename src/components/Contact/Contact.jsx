@@ -204,22 +204,44 @@ const ContactContainer = styled(motion.div)`
     /* top: ; */
     h3 {
       letter-spacing: 0.5rem;
-      transform: translateX(2.5rem);
+      /* transform: translateX(-1rem); */
       /* padding-left: 2rem; */
     }
     .form-container {
       margin-top: 10rem;
       .contact-form {
         /* border: 2px solid green; */
-        margin-left: 3rem;
+        margin-left: -4rem;
         input {
           width: 30rem;
         }
         .top {
           /* border: 2px solid blue; */
-          left: 4rem;
-          margin-top: 13rem;
+          left: 20rem;
+          margin-top: 1rem;
           /* top: -1rem; */
+        }
+      }
+    }
+  }
+
+  @media (max-width: 415px) {
+    h3 {
+      font-size: 4rem;
+      margin-top: -3rem;
+    }
+    .form-container {
+      .contact-form {
+        margin-top: -1rem;
+        input,
+        textarea,
+        button {
+          width: 20rem;
+        }
+        .top {
+          left: 1rem;
+          top: 29rem;
+          padding-bottom: 2rem;
         }
       }
     }

@@ -43,6 +43,13 @@ const WorkButtonContainer = styled(motion.div)`
   @media (max-width: 768px) {
     left: 1rem;
   }
+  @media (max-width: 415px) {
+    left: -5rem;
+    width: 6rem;
+    a {
+      font-size: 0.8rem;
+    }
+  }
 `;
 
 export default WorkButton;

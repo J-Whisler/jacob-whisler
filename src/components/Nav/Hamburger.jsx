@@ -4,6 +4,7 @@ import DesktopNav from "./DesktopNav";
 
 const Hamburger = () => {
   const [open, setOpen] = useState(false);
+  const handleClick = () => !setOpen;
   return (
     <>
       <StyledHamburger open={open} onClick={() => setOpen(!open)}>
@@ -11,7 +12,7 @@ const Hamburger = () => {
         <div></div>
         <div></div>
       </StyledHamburger>
-      <DesktopNav open={open} />
+      <DesktopNav open={open} handleClick={() => setOpen(!open)} />
     </>
   );
 };
@@ -37,6 +38,12 @@ const StyledHamburger = styled.div`
     top: 4rem;
     right: 3rem;
   }
+
+  @media (max-width: 415px) {
+    right: 3rem;
+    top: 5rem;
+    z-index: 100000000;
+  }
   div {
     width: 2rem;
     height: 0.25rem;
@@ -56,6 +63,10 @@ const StyledHamburger = styled.div`
     &:nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0deg)")};
     }
+
+    /* @media (max-width: 415px) {
+
+    } */
   }
 `;
 

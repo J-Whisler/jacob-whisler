@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { navItemsAnim } from "../Shared/Animations";
 
-const DesktopNav = ({ open }) => {
+const DesktopNav = ({ open, handleClick }) => {
   return (
     <>
       <NavItems
@@ -16,22 +16,46 @@ const DesktopNav = ({ open }) => {
         animate="animate"
       >
         <li className="li-top">
-          <Link className="link" to="about" smooth={true} duration={1000}>
+          <Link
+            className="link"
+            to="about"
+            smooth={true}
+            duration={1000}
+            onClick={handleClick}
+          >
             About
           </Link>
         </li>
         <li>
-          <Link className="link" to="skills" smooth={true} duration={1000}>
+          <Link
+            className="link"
+            to="skills"
+            smooth={true}
+            duration={1000}
+            onClick={handleClick}
+          >
             Skills
           </Link>
         </li>
         <li>
-          <Link className="link" to="work" smooth={true} duration={1000}>
+          <Link
+            className="link"
+            to="work"
+            smooth={true}
+            duration={1000}
+            onClick={handleClick}
+          >
             Work
           </Link>
         </li>
         <li className="li-bottom">
-          <Link className="link" to="contact" smooth={true} duration={1000}>
+          <Link
+            className="link"
+            to="contact"
+            smooth={true}
+            duration={1000}
+            onClick={handleClick}
+          >
             Contact
           </Link>
         </li>
@@ -89,15 +113,20 @@ const NavItems = styled(motion.div)`
   @media (max-width: 768px) {
     position: absolute;
     top: 0rem;
-
     padding-top: 12rem;
     height: 75vh;
-    /* width: 100vw; */
     justify-content: center;
-
     transform: ${({ open }) =>
       open ? "translateX(35vw)" : "translateX(100vw)"};
     z-index: 1000;
+    border-bottom: 5px solid var(--tertiary-color);
+  }
+
+  @media (max-width: 415px) {
+    transform: ${({ open }) =>
+      open ? "translateX(21vw)" : "translateX(100vw)"};
+    height: 95vh;
+    border-bottom: 5px solid var(--tertiary-color);
   }
 `;
 

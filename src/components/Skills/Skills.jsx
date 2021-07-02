@@ -97,6 +97,15 @@ const SkillsContainer = styled.div`
       top: 15%;
     }
   }
+
+  @media (max-width: 415px) {
+    h3 {
+      font-size: 3.5rem;
+    }
+    .chart {
+      left: 2.7rem;
+    }
+  }
 `;
 
 export default Skills;

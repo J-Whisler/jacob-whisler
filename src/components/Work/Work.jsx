@@ -441,6 +441,45 @@ const WorkContainer = styled.div`
       }
     }
   }
+
+  @media (max-width: 415px) {
+    h3 {
+      margin-left: 2rem;
+    }
+    .work-content-container {
+      width: 17.4rem;
+      /* border: 2px solid white; */
+      left: 8.5rem;
+      .work-content-top {
+        .work-content-top-headers {
+          h4 {
+            font-size: 1.8rem;
+          }
+        }
+        .work-content-info {
+          .base-p,
+          p {
+            font-size: 0.8em;
+            margin-left: -4rem;
+            margin-top: 6rem;
+            width: 5rem;
+            line-height: 1.2rem;
+            /* display: none; */
+          }
+        }
+      }
+      .work-content-bottom {
+        .work-gif {
+          left: -3rem;
+          top: 5rem;
+          iframe {
+            /* border-radius: 1rem; */
+            width: 17rem;
+          }
+        }
+      }
+    }
+  }
 `;
 
 export default Work;

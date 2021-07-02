@@ -156,6 +156,21 @@ const AboutContainer = styled(motion.div)`
       }
     }
   }
+
+  @media (max-width: 415px) {
+    .about-text {
+      top: 8rem;
+      h3 {
+        font-size: 2.7rem;
+      }
+      h5 {
+        font-size: 1.9rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
 `;
 
 export default About;
