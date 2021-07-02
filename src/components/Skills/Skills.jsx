@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Bar } from "react-chartjs-2";
 import { motion } from "framer-motion";
-import { componentAnim } from "../Shared/Animations";
 import { useInView } from "react-intersection-observer";
 const data = {
   labels: [
@@ -25,6 +24,26 @@ const data = {
 const options = {
   indexAxis: "x",
   responsive: true,
+};
+
+const componentAnim = {
+  initial: {
+    opacity: 0,
+    // y: "100vh",
+    // scale: 0,
+  },
+  animate: {
+    opacity: 1,
+    // y: 0,
+    // scale: 1,
+    transition: {
+      duration: 3,
+      // delay: 0.5,
+      // type: "tween",
+      // stiffness: 120,
+      // mass: 2,
+    },
+  },
 };
 
 const Skills = () => {
