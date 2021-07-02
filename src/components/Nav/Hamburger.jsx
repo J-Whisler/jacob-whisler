@@ -12,7 +12,7 @@ const Hamburger = () => {
         <div></div>
         <div></div>
       </StyledHamburger>
-      <DesktopNav open={open} handleClick={() => setOpen(!open)} />
+      <DesktopNav open={open} handleClick={handleClick} />
     </>
   );
 };
