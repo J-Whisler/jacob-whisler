@@ -4,7 +4,21 @@ import SocialLinks from "./SocialLinks";
 
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-import { navItemsAnim } from "../Shared/Animations";
+
+const navItemsAnim = {
+  initial: {
+    opacity: 0,
+    // scale: 0,
+  },
+  animate: {
+    opacity: 1,
+    // scale: 1,
+    transition: {
+      duration: 1.5,
+      delay: 1.5,
+    },
+  },
+};
 
 const DesktopNav = ({ open, handleClick }) => {
   return (

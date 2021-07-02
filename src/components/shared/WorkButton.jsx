@@ -2,8 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import { buttonAnim } from "./Animations";
+const buttonAnim = {
+  hidden: {
+    opacity: 0,
+    scale: 0,
+  },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      // type: "linear",
 
+      delay: 1.5,
+    },
+  },
+};
 const WorkButton = ({ children }) => {
   return (
     <WorkButtonContainer

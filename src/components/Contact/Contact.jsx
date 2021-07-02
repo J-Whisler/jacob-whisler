@@ -4,7 +4,26 @@ import emailjs from "emailjs-com";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-import { componentAnim } from "../Shared/Animations";
+
+const componentAnim = {
+  initial: {
+    opacity: 0,
+    // y: "100vh",
+    // scale: 0,
+  },
+  animate: {
+    opacity: 1,
+    // y: 0,
+    // scale: 1,
+    transition: {
+      duration: 3,
+      // delay: 0.5,
+      // type: "tween",
+      // stiffness: 120,
+      // mass: 2,
+    },
+  },
+};
 
 const Contact = () => {
   const { ref, inView } = useInView();
