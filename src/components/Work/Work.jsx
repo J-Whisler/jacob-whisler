@@ -78,11 +78,11 @@ const buttonAnim = {
   //   },
   // },
   initial: {
-    // scale: 0,
+    scale: 0,
     opacity: 0,
   },
   animate: {
-    // scale: 1,
+    scale: 1,
     opacity: 1,
     transition: {
       // type: "spring",
@@ -173,7 +173,7 @@ const Work = () => {
                   initial="initial"
                   animate="animate"
                 >
-                  <a href="/">See Sunshine!</a>
+                  <a href="https://weather-jw.herokuapp.com/">See Sunshine!</a>
                 </motion.div>
               </>
             )}
@@ -199,7 +199,9 @@ const Work = () => {
                   initial="initial"
                   animate="animate"
                 >
-                  <a href="/">See Discover!</a>
+                  <a href="https://discover-isl.herokuapp.com/">
+                    See Discover!
+                  </a>
                 </motion.div>
               </>
             )}
@@ -251,7 +253,9 @@ const Work = () => {
                   initial="initial"
                   animate="animate"
                 >
-                  <a href="/">See Netflix!</a>
+                  <a href="https://netflix-by-jw.herokuapp.com/">
+                    See Netflix!
+                  </a>
                 </motion.div>
               </>
             )}
