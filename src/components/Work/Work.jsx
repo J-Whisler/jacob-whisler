@@ -173,7 +173,13 @@ const Work = () => {
                   initial="initial"
                   animate="animate"
                 >
-                  <a href="https://weather-jw.herokuapp.com/">See Sunshine!</a>
+                  <a
+                    href="https://weather-jw.herokuapp.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    See Sunshine!
+                  </a>
                 </motion.div>
               </>
             )}
@@ -199,7 +205,11 @@ const Work = () => {
                   initial="initial"
                   animate="animate"
                 >
-                  <a href="https://discover-isl.herokuapp.com/">
+                  <a
+                    href="https://discover-isl.herokuapp.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     See Discover!
                   </a>
                 </motion.div>
@@ -226,7 +236,11 @@ const Work = () => {
                   initial="initial"
                   animate="animate"
                 >
-                  <a href="https://rock-paper-scissors-jw.herokuapp.com/">
+                  <a
+                    href="https://rock-paper-scissors-jw.herokuapp.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     See R.P.S!
                   </a>
                 </motion.div>
@@ -253,7 +267,11 @@ const Work = () => {
                   initial="initial"
                   animate="animate"
                 >
-                  <a href="https://netflix-by-jw.herokuapp.com/">
+                  <a
+                    href="https://netflix-by-jw.herokuapp.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     See Netflix!
                   </a>
                 </motion.div>
