@@ -38,7 +38,7 @@ const componentAnim = {
     // scale: 1,
     transition: {
       duration: 3,
-      delay: 3,
+      delay: 0.5,
       // type: "tween",
       // stiffness: 120,
       // mass: 2,

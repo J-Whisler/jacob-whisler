@@ -8,47 +8,19 @@ import { Link } from "react-scroll";
 const componentAnim = {
   initial: {
     opacity: 0,
-    // y: "100vh",
-    // scale: 0,
   },
   animate: {
     opacity: 1,
-    // y: 0,
-    // scale: 1,
+
     transition: {
       duration: 3,
-      delay: 1,
-      // type: "tween",
-      // stiffness: 120,
-      // mass: 2,
+      delay: 0.5,
     },
   },
 };
 
 const Contact = () => {
   const { ref, inView } = useInView();
-  // console.log(inView);
-
-  // const animation = useAnimation();
-  // console.log(inView);
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     animation.start({
-  //       x: 0,
-  //       transition: {
-  //         type: "spring",
-  //         duration: 1,
-  //         bounce: 0.3,
-  //       },
-  //     });
-  //   }
-  //   if (!inView) {
-  //     animation.start({
-  //       x: "-100vw",
-  //     });
-  //   }
-  // }, [inView]);
 
   const sendEmail = (e) => {
     e.preventDefault();

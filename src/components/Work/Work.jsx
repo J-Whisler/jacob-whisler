@@ -63,18 +63,32 @@ const gifAnim = {
 };
 
 const buttonAnim = {
-  hidden: {
-    opacity: 0,
-    scale: 0,
-  },
-  show: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-      // type: "linear",
+  // hidden: {
+  //   opacity: 0,
+  //   scale: 0,
+  // },
+  // show: {
+  //   opacity: 1,
+  //   scale: 1,
+  //   transition: {
+  //     duration: 0.5,
+  //     // type: "linear",
 
-      delay: 1.5,
+  //     delay: 3,
+  //   },
+  // },
+  initial: {
+    // scale: 0,
+    opacity: 0,
+  },
+  animate: {
+    // scale: 1,
+    opacity: 1,
+    transition: {
+      // type: "spring",
+      // stiffness: 120,
+      duration: 1,
+      delay: 3.5,
     },
   },
 };
@@ -113,7 +127,7 @@ const Work = () => {
               className={activeProject === 3 ? "active" : ""}
               onClick={() => setActiveProject(3)}
             >
-              Game <i className="fas fa-gamepad"></i>
+              R.P.S. <i className="fas fa-gamepad"></i>
             </h4>
             <h4
               className={activeProject === 4 ? "active" : ""}
@@ -199,7 +213,9 @@ const Work = () => {
                     animate="animate"
                     exit="exit"
                   >
-                    <span>Game</span> Info
+                    <span>R.P.S.</span> This is my take on the classic game
+                    "Rock, Paper, Scissors". View a gif of the project or click
+                    the button below to view the website!
                   </motion.p>
                 </AnimatePresence>
                 <motion.div
@@ -208,7 +224,9 @@ const Work = () => {
                   initial="initial"
                   animate="animate"
                 >
-                  <a href="/">See Game!</a>
+                  <a href="https://rock-paper-scissors-jw.herokuapp.com/">
+                    See R.P.S!
+                  </a>
                 </motion.div>
               </>
             )}
@@ -303,16 +321,16 @@ const Work = () => {
                 exit="exit"
               >
                 <iframe
-                  src="https://giphy.com/embed/3WYiNa7vx0w19jGQKz"
+                  src="https://giphy.com/embed/OCR5FpTNg4iizSCWfG"
                   width="480"
                   height="230"
                   frameBorder="0"
+                  title="rps"
                   className="giphy-embed"
-                  title="game"
                   allowFullScreen
                 ></iframe>
                 <p>
-                  <a href="https://giphy.com/gifs/3WYiNa7vx0w19jGQKz">
+                  <a href="https://giphy.com/gifs/OCR5FpTNg4iizSCWfG">
                     via GIPHY
                   </a>
                 </p>
