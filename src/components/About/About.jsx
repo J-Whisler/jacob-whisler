@@ -145,7 +145,7 @@ const About = () => {
 };
 
 const AboutContainer = styled(motion.div)`
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
   width: 84.17%;
   height: 100vh;
   position: absolute;
